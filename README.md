@@ -13,3 +13,7 @@ Author - Adarsh K S
 - Cloud Grids - Selenium Docker Integration
 - SonarLint, Java > 8
 - Run Local and on Selenium Integration
+
+In the Framework, I need to add Testdata.xlsx, Utils folder
+,WaitHelpers and CommontoAll from selenium project
+// need to revisit later
