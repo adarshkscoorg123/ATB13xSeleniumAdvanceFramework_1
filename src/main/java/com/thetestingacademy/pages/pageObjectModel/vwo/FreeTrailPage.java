@@ -8,17 +8,20 @@ public class FreeTrailPage {
     WebDriver driver;
 
     public FreeTrailPage(WebDriver driver) {
+
         this.driver = driver;
     }
 
     //input[@id="page-v1-step1-email"]
 
+    // Step 1 - Page locators
     private By email_input =  By.id("page-v1-step1-email");
     private By checkBox = By.id("page-free-trial-step1-cu-gdpr-consent-checkbox");
     private By subButton = By.xpath("//button[text()=\"Create a Free Trial Account\"]");
     private By error_message_xpath = By.xpath("//div[contains(@class,\"invalid-reason\")]");
 
 
+    // Step 2 - Page Actions
     public String enterDetailsInvalid(String email){
 
         driver.get("https://vwo.com/free-trial");

@@ -23,12 +23,12 @@ public class DashboardPage {
     private By amcret = By.xpath("//h6[text()=\"Amcret\"]");
     private By testing = By.xpath("//span[text()=\"Testing\"]");
 
+    // Step 2 - Page Actions
     public String loggedinName(){
         WaitHelpers.waitJVM(10000);
         driver.get("https://app.vwo.com/#/dashboard");
         String nameAmcret = driver.findElement(dashboard).getText();
         return nameAmcret;
-
     }
 
     public String dashBoardName(){

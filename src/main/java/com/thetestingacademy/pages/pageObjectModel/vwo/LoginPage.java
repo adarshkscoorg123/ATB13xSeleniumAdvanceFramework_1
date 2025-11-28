@@ -1,5 +1,6 @@
 package com.thetestingacademy.pages.pageObjectModel.vwo;
 
+import com.thetestingacademy.utils.PropertiesReader;
 import com.thetestingacademy.utils.WaitHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ public class LoginPage {
 
    // Step 2 - Page Actions
    public String loginToVWOInvalidCredentials(String user, String pwd){
-      driver.get("https://app.vwo.com");
+      driver.get(PropertiesReader.readKey("url"));
       driver.findElement(userName).sendKeys(user);
       driver.findElement(password).sendKeys(pwd);
       driver.findElement(SignIn).click();
@@ -42,7 +43,7 @@ public class LoginPage {
    }
 
    public void loginToVWOValidCredentials(String user, String pwd) throws InterruptedException {
-      driver.get("https://app.vwo.com");
+      driver.get(PropertiesReader.readKey("url"));
       driver.manage().window().maximize();
       driver.findElement(userName).sendKeys(user);
       driver.findElement(password).sendKeys(pwd);
